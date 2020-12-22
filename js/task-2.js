@@ -1,4 +1,4 @@
-console.log('TASK-2');
+console.log('************TASK-2************');
 const total = 100;
 let ordered = 20;
 console.log('Количество товаров на складе:', total);
