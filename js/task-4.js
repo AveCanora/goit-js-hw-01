@@ -11,9 +11,10 @@ else {
     if (isNaN(Number(quantity)) == false) {
         let totalPrice = quantity * pricePerDroid;
         if (totalPrice > credits) message = 'Недостаточно средств на счету!'
-        else message = `Вы купили, ${quantity}, дроидов, на счету осталось,  ${credits - totalPrice}, кредитов!`;
+        else message = `Вы купили ${quantity} дроидов, на счету осталось ${credits - totalPrice} кредитов!`;
+        // else message = 'Вы купили' + quantity + 'дроидов, на счету осталось' + credits - totalPrice + 'кредитов!';
     }
-    else message = 'Вы ввели данные некоректно!';
+    else message = 'Вы ввели данные не корректно!';
 }
 
 alert(message);
