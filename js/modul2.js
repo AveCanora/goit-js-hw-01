@@ -271,6 +271,20 @@ function getCommonElements(array1, array2) {
 console.log('Задача 25', getCommonElements([1, 2, 3], [2, 1, 17, 19]));
 console.log(getCommonElements([24, 12, 27, 3], [12, 8, 3, 36, 27]));
 
+//АЛЬТЕРНАТИВНЫЙ КОД ДЛЯ ЗАДАЧИ 25
+
+function getCommonElements(array1, array2) {
+    // Пиши код ниже этой строки
+    let array3 = [];
+    for (const element of array1) {
+
+        if (array2.includes(element)) array3.push(element);
+
+    }
+
+    return array3;
+}
+
 // Задача 26
 // Выполни рефакторинг кода функции calculateTotalPrice(order) заменив цикл for на for...of.
 function calculateTotalPrice1(order) {
