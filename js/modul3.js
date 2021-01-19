@@ -736,7 +736,7 @@ const atTheOldToad = {
         // Пиши код ниже этой строки
         const index = this.potions.indexOf(potionName);
         this.potions.splice(index, 1);
-        return this.potions;;
+        return this.potions;
         // 🔥 Оставляем три пустые строки для студента
 
         // Пиши код выше этой строки
@@ -828,6 +828,9 @@ const atTheOldToad = {
         return this.potions;
     },
     removePotion(potionName) {
+
+
+
         let i = 0;
         for (const keys of this.potions) {
 
@@ -840,14 +843,14 @@ const atTheOldToad = {
         return this.potions;
     },
     updatePotionName(oldName, newName) {
-        let i = 0;
+        // let i = 0;
         for (const keys of this.potions) {
 
 
             if (keys.name === oldName) {
                 keys.name = newName;
             }
-            i += 1;
+            // i += 1;
         }
         return this.potions;
 
