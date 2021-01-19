@@ -339,7 +339,8 @@ console.log(getProductPrice('Дроид'));
 console.log(getProductPrice('Захват'));
 
 // TASK-19****************************************************
-// Напиши функцию getAllPropValues(propName) которая принимает один параметр propName - имя (ключ) свойства. Функция должна вернуть массив всех значений свойства с таким именем из каждого объекта в массиве products. Если в объектах нет свойства с таким именем, функция должна вернуть пустой массив.
+// Напиши функцию getAllPropValues(propName) которая принимает один параметр propName - имя (ключ) свойства.
+// Функция должна вернуть массив всех значений свойства с таким именем из каждого объекта в массиве products. Если в объектах нет свойства с таким именем, функция должна вернуть пустой массив.
 const products = [
     { name: 'Радар', price: 1300, quantity: 4 },
     { name: 'Сканер', price: 2700, quantity: 3 },
@@ -362,6 +363,41 @@ console.log(getAllPropValues('price'));
 console.log(getAllPropValues('name'));
 console.log(getAllPropValues('quantity'));
 console.log(getAllPropValues('category'));
+
+
+// другие варианты:
+// 1-й
+// Пиши код ниже этой строки
+//  let values = [];                                                                                                                          for (const product of products) {
+//     const keys = Object.keys(product);
+//     for (const key of keys) {
+//       if (propName === key) {
+//         values.push(product[propName]);
+//      }
+//     }
+//   }
+//   return values;
+//  }      
+
+// 2-й (от учителя)
+// const value = [];
+// for (const item of products) {
+//     if (propName in item) {
+//         values.push(item[propName]);
+//     }
+// }
+// 3-й вариант мой усовершенствоанный
+// function getAllPropValues(propName) {
+//     // Пиши код ниже этой строки
+//     const arrayName = [];
+//     const keys = Object.keys(products);
+//     for (const key of products) {
+//         if (key[propName]) arrayName.push(key[propName]);
+//     }
+//     return arrayName;
+
+//     // Пиши код выше этой строки
+// }
 
 // TASK-20****************************************************
 // Напиши функцию calculateTotalPrice(productName) которая принимает один параметр productName - название товара. Функция должна вернуть общую стоимость (цена * количество) товара с таким именем из массива products.
