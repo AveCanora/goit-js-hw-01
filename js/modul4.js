@@ -161,6 +161,8 @@ function composeMessage(position) {
 const messages = orders.map(function (element, index) {
     return composeMessage.call(element, index);
 });
+
+
 // TASK-8*****************************************************
 // Метод apply
 // Выполни рефакторинг кода так, чтобы функция composeMessage(position) вызывалась методом apply.
@@ -235,4 +237,3 @@ console.log(secondInvoke);
 // Почта poly@hotmail.de удалена из рассылки.
 
 console.log(service.mailingList); // ['mango@mail.com', 'ajax@jmail.net', 'kiwi@mail.uk']
-
